@@ -1,0 +1,8 @@
+FROM centos
+ENV mypath /tmp
+WORKDIR $mypath
+#VOLUME ["/dataV1", "/dataV2"]
+RUN yum -y install vim
+RUN yum -y install net-tools
+EXPOSE 80
+CMD /bin/bash
