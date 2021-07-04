@@ -1,8 +1,10 @@
 FROM centos
-ENV mypath /tmp
-WORKDIR $mypath
+MAINTAINER 2359451d<bentoremains@gmail.com>
+ENV MYPATH /tmp
+WORKDIR $MYPATH
 #VOLUME ["/dataV1", "/dataV2"]
 RUN yum -y install vim
 RUN yum -y install net-tools
 EXPOSE 80
+CMD echo $MYPATH
 CMD /bin/bash
